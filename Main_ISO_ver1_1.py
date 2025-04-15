@@ -1180,10 +1180,34 @@ class ISO27001ImplementationAssistant:
                 "phase": 3,
                 "name": "Control Implementation",
                 "tasks": [
-                    "Organizational controls (A.5)",
-                    "People controls (A.6)",
-                    "Physical controls (A.7)",
-                    "Technological controls (A.8)"
+                    "Organizational controls (A.5) – 37 controls",
+                    "People controls (A.6) – 8 controls",
+                    "Physical controls (A.7) – 14 controls",
+                    "Technological controls (A.8)  – 34 controls",
+                    "ISO/IEC 27002:2022 is a supplementary standard to ISO/IEC 27001 that provides detailed guidelines for implementing the 93 security controls listed in Annex A of ISO 27001.",
+                    "Key Features of ISO/IEC 27002:2022",
+                    "Purpose:",
+                    "Offers best practices for implementing information security controls.",
+                    "Helps organizations customize controls based on risk assessments.",
+                    "Structure:",
+                    "The controls are grouped into 4 main themes (instead of the previous 14 domains in the 2013 version):",
+                    "A.5 Organizational Controls (37 controls)",
+                    "A.6 People Controls (8 controls)",
+                    "A.7 Physical Controls (14 controls)",
+                    "A.8 Technological Controls (34 controls)",
+                    "New & Updated Controls:",
+                    "Introduces 11 new controls, including:",
+                        "Threat intelligence (A.5.7)",
+                        "Cloud services security (A.5.23)",
+                        "Data leakage prevention (A.8.12)",
+                        "ICT readiness for business continuity (A.5.30)",
+                    "Five Attributes for Control Selection (Optional Filtering):",
+                    "Helps organizations prioritize controls based on:",
+                        "Control type (Preventive, Detective, Corrective)",
+                        "Security properties (Confidentiality, Integrity, Availability)",
+                    "Cybersecurity concepts (Identify, Protect, Detect, Respond, Recover)",
+                    "Operational capabilities (Governance, Asset management, etc.)",
+                    "Security domains (Governance & Ecosystem, Protection, Defense, Resilience)"
                 ]
             },
             {
@@ -1230,7 +1254,7 @@ class ISO27001ImplementationAssistant:
                 print("Invalid option, please try again.")
 
     def view_all_controls(self):
-        print("\n=== All ISO 27001 Controls ===")
+        print("\n=== All ISO 27001:2022 93 Controls ===")
         for control_id, details in self.controls.items():
             status = self.get_control_status(control_id)
             print(f"\n{control_id}: {details['title']}")
@@ -1268,10 +1292,10 @@ class ISO27001ImplementationAssistant:
 
     def view_controls_by_domain(self):
         print("\n=== View Controls by Domain ===")
-        print("1. Organizational (A.5)")
-        print("2. People (A.6)")
-        print("3. Physical (A.7)")
-        print("4. Technological (A.8)")
+        print("1. Organizational (A.5) – 37 controls")
+        print("2. People (A.6) – 8 controls")
+        print("3. Physical (A.7) – 14 controls")
+        print("4. Technological (A.8) – 34 controls")
         print("5. Back to Main Menu")
 
         choice = input("\nSelect domain (1-5): ")
@@ -1305,7 +1329,8 @@ class ISO27001ImplementationAssistant:
             print("Invalid control ID. Please try again.")
             return
 
-        print(f"\nCurrent status for {control_id}: {self.get_control_status(control_id).value}")
+        print(
+            f"\nCurrent status for {control_id}: {self.get_control_status(control_id).value}")
         print("\nAvailable statuses:")
         for i, status in enumerate(ControlStatus, 1):
             print(f"{i}. {status.value}")
@@ -1357,7 +1382,8 @@ class ISO27001ImplementationAssistant:
             data = json.load(f)
 
         for control_id in self.controls:
-            status = ControlStatus[data['controls_status'].get(control_id, "NOT_STARTED")]
+            status = ControlStatus[data['controls_status'].get(
+                control_id, "NOT_STARTED")]
             status_counts[status] += 1
 
         print(f"\nTotal Controls: {total_controls}")
@@ -1368,7 +1394,8 @@ class ISO27001ImplementationAssistant:
         print("\nControls Needing Attention:")
         for control_id, status in data['controls_status'].items():
             if status in ["NOT_STARTED", "IN_PROGRESS"]:
-                print(f" - {control_id}: {self.controls[control_id]['title']} ({status})")
+                print(
+                    f" - {control_id}: {self.controls[control_id]['title']} ({status})")
 
         print("\nLast Updated:", data.get('last_updated', 'Never'))
 
