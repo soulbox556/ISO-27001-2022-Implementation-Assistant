@@ -7,7 +7,7 @@ ISO 27001:2022 Implementation Assistant A Python tool to streamline ISO 27001 co
 
 A Python-based tool to help organizations implement ISO 27001:2022 security controls and track their compliance progress.
 
-![Screenshot](docs/screenshot.png) 
+
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/3b25eba8-8e2b-4da0-a31c-045b826cd608" />
 
 
