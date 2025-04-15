@@ -1165,7 +1165,28 @@ class ISO27001ImplementationAssistant:
                     "Define ISMS scope",
                     "Obtain management commitment",
                     "Develop initial policies"
-                ]
+                    """
+                ISO/IEC 27002:2022 - Detailed Implementation Guide
+
+                A.5 - Organizational Controls (37 Controls)
+                Focus: Governance, policies, roles, and risk management.
+
+                Key Activities:
+                1. Establish information security policies (A.5.1)
+                - Develop comprehensive policies covering all security domains
+                - Obtain formal management approval
+                - Communicate to all stakeholders
+                
+                2. Define security roles (A.5.2)
+                - Assign clear information security responsibilities
+                - Document accountability for all assets
+                
+                3. Conduct initial risk assessment
+                - Identify organizational assets
+                - Assess threats and vulnerabilities
+                - Determine risk treatment plan
+                """
+                ],
             },
             {
                 "phase": 2,
@@ -1174,41 +1195,54 @@ class ISO27001ImplementationAssistant:
                     "Asset identification",
                     "Risk analysis",
                     "Risk treatment plan"
-                ]
+                    """
+                Risk Management Implementation Guidance:
+
+                1. Asset Identification (A.5.9)
+                - Create inventory of all information assets
+                - Classify assets by sensitivity (Public, Internal, Confidential, Restricted)
+                - Assign ownership for each asset
+
+                2. Threat Assessment (A.5.7)
+                - Subscribe to threat intelligence feeds (CISA, commercial providers)
+                - Analyze threats specific to your industry
+                - Maintain threat library with likelihood/impact ratings
+
+                3. Risk Treatment (A.5.3)
+                - Select controls based on risk assessment
+                - Document risk acceptance for residual risks
+                - Implement segregation of duties for critical processes
+                """
+                ],
             },
             {
                 "phase": 3,
                 "name": "Control Implementation",
                 "tasks": [
-                    "Organizational controls (A.5) – 37 controls",
-                    "People controls (A.6) – 8 controls",
-                    "Physical controls (A.7) – 14 controls",
-                    "Technological controls (A.8)  – 34 controls",
-                    "ISO/IEC 27002:2022 is a supplementary standard to ISO/IEC 27001 that provides detailed guidelines for implementing the 93 security controls listed in Annex A of ISO 27001.",
-                    "Key Features of ISO/IEC 27002:2022",
-                    "Purpose:",
-                    "Offers best practices for implementing information security controls.",
-                    "Helps organizations customize controls based on risk assessments.",
-                    "Structure:",
-                    "The controls are grouped into 4 main themes (instead of the previous 14 domains in the 2013 version):",
-                    "A.5 Organizational Controls (37 controls)",
-                    "A.6 People Controls (8 controls)",
-                    "A.7 Physical Controls (14 controls)",
-                    "A.8 Technological Controls (34 controls)",
-                    "New & Updated Controls:",
-                    "Introduces 11 new controls, including:",
-                        "Threat intelligence (A.5.7)",
-                        "Cloud services security (A.5.23)",
-                        "Data leakage prevention (A.8.12)",
-                        "ICT readiness for business continuity (A.5.30)",
-                    "Five Attributes for Control Selection (Optional Filtering):",
-                    "Helps organizations prioritize controls based on:",
-                        "Control type (Preventive, Detective, Corrective)",
-                        "Security properties (Confidentiality, Integrity, Availability)",
-                    "Cybersecurity concepts (Identify, Protect, Detect, Respond, Recover)",
-                    "Operational capabilities (Governance, Asset management, etc.)",
-                    "Security domains (Governance & Ecosystem, Protection, Defense, Resilience)"
-                ]
+                    "Organizational controls (A.5)",
+                    "People controls (A.6)",
+                    "Physical controls (A.7)",
+                    "Technological controls (A.8)"
+                    """
+                Control Implementation Best Practices:
+
+                A.5 Organizational Controls:
+                - A.5.23 Cloud Security: Implement CASB solutions, review CSP SLAs
+                - A.5.24 Incident Management: Establish CSIRT team, test playbooks
+
+                A.6 People Controls:
+                - A.6.1 Screening: Background checks for all privileged roles
+                - A.6.3 Training: Annual security awareness program
+
+                A.7 Physical Controls:
+                - A.7.1 Physical Security: Badge access systems, CCTV monitoring
+                - A.7.4 Clear Desk: Automatic screen locking, clean desk audits
+
+                A.8 Technological Controls:
+                - A.8.1 Endpoints: Enforce encryption, EDR solutions
+                - A.8.12 DLP: Monitor data flows, block unauthorized transfers
+                """
+                ],
             },
             {
                 "phase": 4,
@@ -1218,7 +1252,30 @@ class ISO27001ImplementationAssistant:
                     "Management review",
                     "Stage 1 audit",
                     "Stage 2 audit"
-                ]
+                    """
+                Certification Roadmap:
+
+                1. Internal Audit (2-3 months before certification)
+                - Conduct gap analysis against all 93 controls
+                - Verify implementation evidence exists
+                - Remediate any major non-conformities
+
+                2. Management Review (1 month before)
+                - Review ISMS performance metrics
+                - Approve any required changes
+                - Confirm readiness for certification
+
+                3. Stage 1 Audit (Documentation Review)
+                - Verify all required policies/procedures exist
+                - Confirm risk assessment methodology
+                - Address any documentation gaps
+
+                4. Stage 2 Audit (Implementation Verification)
+                - Demonstrate control effectiveness
+                - Provide records of monitoring activities
+                - Show continuous improvement processes
+                """
+                ],
             }
         ]
 
