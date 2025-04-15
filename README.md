@@ -23,5 +23,5 @@ A Python-based tool to help organizations implement ISO 27001:2022 security cont
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/iso27001-implementation-assistant.git
+   git clone https://github.com/soulbox556/iso27001-implementation-assistant.git
    cd iso27001-implementation-assistant
